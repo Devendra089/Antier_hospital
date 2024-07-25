@@ -10,9 +10,9 @@ const DoctorList = () => {
     useEffect(() => {
         const fetchDoctors = async () => {
             try {
-                // const response = await axios.get('https://api-ai-showcase.antiersolutions.com/doctors');
+                const response = await axios.get('https://api-ai-showcase.antiersolutions.com/doctors');
 
-                const response = await axios.get('http://192.168.10.68:5001/doctors');
+                // const response = await axios.get('http://192.168.10.68:5001/doctors');
 
                 setDoctors(response.data);
             } catch (error) {

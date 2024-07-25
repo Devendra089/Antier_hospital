@@ -5,7 +5,7 @@ import marutiImage from '../assets/imgs/maruti.jpg';
 const certificationsList = [
     {
         title: "Hospital poc",
-        image: imglogo,
+        image: "",
         instructor: "Book appointment poc",
         link: "/appointmentpage",
         platform: 'udemy'
@@ -13,7 +13,7 @@ const certificationsList = [
     {
         title: "Maruti poc",
         instructor: "Maruti poc form",
-        image: marutiImage,
+        image: "",
         link: "/service-insight-pro",
         platform: 'udemy'
     },

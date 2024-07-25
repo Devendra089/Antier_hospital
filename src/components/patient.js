@@ -101,7 +101,8 @@ const Patient = () => {
     useEffect(() => {
         const fetchDoctors = async () => {
             try {
-                const response = await axios.get('http://192.168.10.68:5001/patient_mapping');
+                const response = await axios.get('https://api-ai-showcase.antiersolutions.com/patient_mapping');
+                // const response = await axios.get('http://192.168.10.68:5001/patient_mapping');
                 setDoctors(response.data);
             } catch (error) {
                 console.error('Error fetching the doctors:', error);
@@ -130,15 +131,15 @@ const Patient = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {doctors.length > 0 ? doctors.map((doctor, index) => (
-                                <tr key={doctor.id}>
+                            {doctors?.length > 0 ? doctors?.map((doctor, index) => (
+                                <tr key={doctor?.id}>
                                     <td>{index + 1}</td>
-                                    <td>{doctor.name}</td>
-                                    <td>{doctor.age}</td>
-                                    <td>{doctor.symptoms}</td>
-                                    <td>{doctor.preference || "General Doctor"}</td>
-                                    <td>{doctor.start_time + "-" + doctor.end_time}</td>
-                                    <td>{doctor.date_of_visit}</td>
+                                    <td>{doctor?.name}</td>
+                                    <td>{doctor?.age}</td>
+                                    <td>{doctor?.symptoms}</td>
+                                    <td>{doctor?.preference || "General Doctor"}</td>
+                                    <td>{doctor?.start_time + "-" + doctor?.end_time}</td>
+                                    <td>{doctor?.date_of_visit}</td>
                                 </tr>
                             )) : (
                                 <tr>

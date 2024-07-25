@@ -10,8 +10,8 @@ const DoctorSchedule = () => {
     useEffect(() => {
         const fetchSchedules = async () => {
             try {
-                // const response = await axios.get('https://api-ai-showcase.antiersolutions.com/doctor_schedules');
-                const response = await axios.get('http://192.168.10.68:5001/doctor_schedules');
+                const response = await axios.get('https://api-ai-showcase.antiersolutions.com/doctor_schedules');
+                // const response = await axios.get('http://192.168.10.68:5001/doctor_schedules');
                 const data = response.data;
                 
                 // Flatten the data
