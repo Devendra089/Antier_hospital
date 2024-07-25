@@ -18,7 +18,7 @@ import DoctorSchelude from "./components/doctorSchedule";
 import Patient from "./components/patient";
 import  { Toaster } from "react-hot-toast"
 import scroll from "./assets/css/form.css"
-
+import Formpage from "./components/Form";
 
 const App = () => {
 	const [user, setUser] = useState({});
@@ -45,18 +45,19 @@ const App = () => {
 						<Route path={"/"} exact>
 							<HomePage />
 						</Route>
-						
+						<Route path={"/service-insight-pro"} exact> 
+							<Formpage/>
+						</Route>
 						<Route path={"/doctor"}>
 							<DoctorList/>
 						</Route>
 						<Route path={"/appointments"} id={scroll} classname="scroll">
-
 							<BookAppointments />
 						</Route>
 						<Route path={"/appointmentpage"}>
 							<LandingPage />
 						</Route>
-						<Route path={"/doctor-schedules"}>
+						<Route path={"/appointment/doctor-schedules"}>
 							<DoctorSchelude />
 						</Route>
 						<Route path={"/patient"}>

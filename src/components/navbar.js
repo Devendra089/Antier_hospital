@@ -18,7 +18,7 @@ const Navbar = () => {
 			</div>
 			<ul className={"nav-links"}>
 				<li>
-					<a href={"/"}>Home</a>
+					<a href={""}>Home</a>
 				</li>
 				<li>
 					<a href={"/appointmentpage"}>Appointment</a>
@@ -27,7 +27,7 @@ const Navbar = () => {
 					<a href={"/doctor"}>Doctor</a>
 				</li>
 				<li>
-					<a href={"/doctor-schedules"}>Doctor Schedules</a>
+					<a href={"/appointment/doctor-schedules"}>Doctor Schedules</a>
 				</li>
 				<li>
 					<a href={"/patient"}>Patient</a>

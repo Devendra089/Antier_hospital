@@ -38,7 +38,7 @@ body {
 }
 
 .nav-container {
-	margin-left: 1%;
+	margin-left: 0%;
 }
 .nav-head {
 	cursor: pointer;
@@ -512,5 +512,5 @@ header {
 }
 
 .logo{
-	width: 40%;
+	width: 30%;
 }
