@@ -82,3 +82,38 @@ const App = () => {
 };
 
 export default App;
+
+
+
+
+
+// import React from 'react';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import Navbar from './components/Navbar';
+// import Footer from './components/Footer';
+// import Home from './pages/Home';
+// import AppointmentPage from './pages/AppointmentPage';
+// import Doctor from './pages/Doctor';
+// import DoctorSchedules from './pages/DoctorSchedules';
+// import Patient from './pages/Patient';
+// import MarutiPage from './pages/MarutiPage'; // Ensure this path is correct
+
+// const App = () => {
+//   return (
+//     <Router>
+//       <Navbar /> {/* Navbar will conditionally render links based on route */}
+//       <Switch>
+//         <Route exact path="/" component={Home} />
+//         <Route path="/appointmentpage" component={AppointmentPage} />
+//         <Route path="/doctor" component={Doctor} />
+//         <Route path="/appointment/doctor-schedules" component={DoctorSchedules} />
+//         <Route path="/patient" component={Patient} />
+//         <Route path="/maruti" component={MarutiPage} />
+//         {/* Add other routes as necessary */}
+//       </Switch>
+//       <Footer />
+//     </Router>
+//   );
+// };
+
+// export default App;

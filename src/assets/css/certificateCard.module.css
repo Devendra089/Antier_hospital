@@ -5,7 +5,7 @@ h1{
 }
 .certificateCard{
     display: flex;
-    margin: 2rem auto;
+    /* margin: 2rem auto; */
     width: 100%;
     justify-content: center;
     gap: 2rem;

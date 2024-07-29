@@ -1,61 +1,4 @@
 
-// // import React, { useState } from "react";
-// // // import ReactDom from "react-dom"
-
-
-// // function One() {
-// //     const [description, setDescription] =  useState('');
-// //     const [ro, setro] =  useState('');
-// //     const [gdms, setgdms] =  useState('');
-    
-// //     const resetform =()=>{
-// //         setDescription("");
-// //         setro("");
-// //         setgdms("");
-// //     }
-
-// //     const onchangefun = (val)=>{
-// //         // console.log(val);
-// //     const vari = (val.target.value);
-// //        console.log(vari);
-// //        setDescription(vari);
-// //     }
-
-
-// //     return (
-// //         <>
-// //             <div>
-
-// //                 <div className="container 1">
-                    
-// //                     <div>
-// //                         <p>Description</p>
-// //                         <input value={description} onChange={onchangefun} />
-
-// //                     </div>
-// //                     <div>
-// //                         <p>RO Remarks</p>
-// //                         <input value={ro} onChange={(e)=> setro(e.target.value)}  />
-// //                     </div>
-// //                     <div>
-// //                         <p>GDMS Remarks</p>
-// //                         <input value={gdms} onChange={(e)=> setgdms(e.target.value)} />
-// //                     </div>
-// //                 </div>
-
-// //                 <div>
-// //                     <input type="reset" onClick={()=> resetform()}/>
-                    
-// //                     <button className="submit" > Submit</button>
-// //                 </div>
-// //             </div>
-// //         </>
-// //     );
-// // }
-
-// // export default One;
-
-
 
 
 
@@ -158,7 +101,7 @@ const Two = (props) => {
                 // onSubmit={formSubmitHandler} 
                 className={formClasses}>
               
-
+              <label>
                     <input 
                  
                     
@@ -168,7 +111,8 @@ const Two = (props) => {
                         disabled={isSent}
                         value={topCategoryType}
                     /> 
-                    
+                    </label>
+                    <label>
                     <input 
                 
                         type="text"
@@ -177,6 +121,8 @@ const Two = (props) => {
                         disabled={isSent}
                         value={topArea}
                     />
+                    </label>
+                    <label>
                     <input
                         type="text"
                         className={nameInputClasses}
@@ -184,6 +130,8 @@ const Two = (props) => {
                         disabled={isSent}
                         value={topSubArea}
                     />
+                    </label>
+                    <label>
                     <input                        
                         type="text"
                         className={nameInputClasses}
@@ -191,6 +139,8 @@ const Two = (props) => {
                         disabled={isSent}
                         value={secondaryCategoryTypes}
                     />
+                    </label>
+                    <label>
                     <input 
                    
                         
@@ -200,6 +150,8 @@ const Two = (props) => {
                         disabled={isSent}
                         value={secondaryAreas}
                     />
+                    </label>
+                    <label>
                     <input 
                     
                         
@@ -209,6 +161,7 @@ const Two = (props) => {
                         disabled={isSent}
                         value={secondarySubAreas}
                     />
+                    </label>
 
                     <br />
                     

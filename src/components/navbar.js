@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 
 import LoginDetails from "../context/LoginContext";
 import logo from "../assets/imgs/image-removebg-preview.png";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 const Navbar = () => {
 	const { loggedIn, user } = useContext(LoginDetails);
 	return !loggedIn ? (
@@ -18,19 +19,19 @@ const Navbar = () => {
 			</div>
 			<ul className={"nav-links"}>
 				<li>
-					<a href={""}>Home</a>
+					<Link to={""}>Home</Link>
 				</li>
 				<li>
-					<a href={"/appointmentpage"}>Appointment</a>
+					<Link to={"/appointmentpage"}>Appointment</Link>
 				</li>
 				<li>
-					<a href={"/doctor"}>Doctor</a>
+					<Link to={"/doctor"}>Doctor</Link>
 				</li>
 				<li>
-					<a href={"/appointment/doctor-schedules"}>Doctor Schedules</a>
+					<Link to={"/appointment/doctor-schedules"}>Doctor Schedules</Link>
 				</li>
 				<li>
-					<a href={"/patient"}>Patient</a>
+					<Link to={"/patient"}>Patient</Link>
 				</li>
 				{/* <li>
 					<a
@@ -44,33 +45,7 @@ const Navbar = () => {
 		</div>
 	) : (
 		<></>
-		// <div className={"navbar"}>
-		// 	<div className={"nav-container"}>
-		// 		<h1
-		// 			onClick={() => {
-		// 				window.location.href = "/";
-		// 			}}
-		// 			className={"nav-head"}>
-		// 			HMS
-		// 		</h1>
-		// 	</div>
-		// 	<ul className={"nav-links"}>
-		// 		<li>
-		// 			<a href={"/appointmentpage"}>{user.name}</a>
-		// 		</li>
-		// 		<li>
-		// 			<a href={"/appointments"}>Book Appoinment</a>
-		// 		</li>
-		// 		<li>
-		// 			<a
-		// 				rel="noreferrer"
-		// 				href={""}
-		// 				target={"_blank"}>
-		// 				About-Us
-		// 			</a>
-		// 		</li>
-		// 	</ul>
-		// </div>
+		
 	);
 };
 

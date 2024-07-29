@@ -48,7 +48,7 @@ const BookAppointments = () => {
         history.push("/patient");
       }
     } catch (error) {
-      toast.error("Failed to make appointment. Please try again later."); // Provide a user-friendly error message
+      toast.error("No suitable doctor found for the given symptoms or preference"); // Provide a user-friendly error message
       console.error("Error making appointment:", error);
     } finally {
       setLoading(false);
