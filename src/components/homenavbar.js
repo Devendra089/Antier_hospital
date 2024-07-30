@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from 'react-router-dom';
 
 import LoginDetails from "../context/LoginContext";
 import logo from "../assets/imgs/image-removebg-preview.png";
@@ -15,17 +16,17 @@ const Navbar = () => {
 					className={"nav-head"}>
 					HMS
 				</h1> */}
-				<a href={"/"}> <img src={logo} alt="Health Insurance" className="logo" /> </a>
+				<Link to={"/"}> <img src={logo} alt="Health Insurance" className="logo" /> </Link>
 			</div>
 			<ul className={"nav-links"}>
 				<li>
-					<a href={"/"}>Home</a>
+					<Link to={"/"}>Home</Link>
 				</li>
 				<li>
-					<a href={"/"}>Lorem</a>
+					<Link to={"/"}>Lorem</Link>
 				</li>
 				<li>
-					<a href={"/"}>Epsum</a>
+					<Link to={"/"}>Epsum</Link>
 				</li>
 				{/* <li>
 					<a href={"/appointment/doctor-schedules"}>Doctor Schedules</a>

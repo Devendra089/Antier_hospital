@@ -16,18 +16,18 @@ const Hyundainavbar = () => {
 					className={"nav-head"}>
 					HMS
 				</h1> */}
-				<a href={"/"}> <img src={logo} alt="Health Insurance" className="logo" /> </a>
+				<a href={"/"}> <img src={logo} alt="Health Insurance" className="logo" style={{marginLeft: '15px'}}/> </a>
 			</div>
 			<ul className={"nav-links"}>
-				<li>
-					<a href={"/"} style={{color: 'black'}}>Home</a>
+				{/* <li>
+					<a href={"/"}>Home</a>
 				</li>
 				<li>
 					<a href={"/"}>Lorem</a>
 				</li>
 				<li>
 					<a href={"/"}>Epsum</a>
-				</li>
+				</li> */}
 				{/* <li>
 					<a href={"/appointment/doctor-schedules"}>Doctor Schedules</a>
 				</li>

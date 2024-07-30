@@ -9,6 +9,7 @@ body {
     padding: 0 !important;
     margin-right: auto;
     margin-left: auto;
+    /* flex:1; */
   
     @media screen and (min-width: 992px) and (max-width: 1439px) {
       max-width: 1279px !important;
@@ -156,13 +157,6 @@ body {
   .card-link:hover {
     text-decoration: underline;
   }
-
-
-
-
-
-
-
 
 
 

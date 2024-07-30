@@ -39,7 +39,7 @@ const Footer = () => {
 			</div>
 			<div className={"footer-bottom"}>
 				<span className={"footer-bottom-text"}>
-					Designed by Antier Solutions
+					{/* Designed by Antier Solutions */}
 				</span>
 			</div>
 		</footer>

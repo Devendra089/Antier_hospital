@@ -15,7 +15,7 @@ const Navbar = () => {
 					className={"nav-head"}>
 					HMS
 				</h1> */}
-				<a href={"/"}> <img src={logo} alt="Health Insurance" className="logo" /> </a>
+				<Link to={"/"}> <img src={logo} alt="Health Insurance" className="logo" /> </Link>
 			</div>
 			<ul className={"nav-links"}>
 				<li>

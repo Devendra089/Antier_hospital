@@ -2,7 +2,7 @@
   border: 0;
   outline: 0;
   font-size: 16px;
-  border-radius: 320px; /* 16px * 20 */
+  /* border-radius: 320px; 16px * 20 */
   padding: 16px;
   background-color: #EBECF0;
   text-shadow: 1px 1px 0 #FFF;
@@ -14,6 +14,7 @@
   margin-bottom: 16px*1.5;
   width: 100%;
 }
+
 .Inputs{
   font-family: 'Montserrat', sans-serif;
     letter-spacing: -0.2px;
