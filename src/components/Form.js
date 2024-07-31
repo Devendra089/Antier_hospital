@@ -65,6 +65,7 @@ const Form = () => {
 
 
     return (
+        <>
         <div className={classes.hyundaibody} id='apt-container'>
             <Navbar />
             <div className={classes.getInTouch}>
@@ -77,8 +78,9 @@ const Form = () => {
                     </div>
                 )}
             </div>
-            <Footer style={{}}/>
         </div>
+            <Footer style={{}}/>
+        </>
     );
 };
 

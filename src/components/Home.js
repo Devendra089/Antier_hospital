@@ -133,7 +133,7 @@ const HomePage = () => {
   return (
     // <div style={{ backgroundImage: `url(${homeImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', minHeight: '100vh' }}>
     // <div id="apt-container">
-    
+    <>
       <div id="apt-container">
         <Navbar/>
         <div className="gradient-cards">
@@ -161,8 +161,9 @@ const HomePage = () => {
         {/* </div> */}
       {/* </div> */}
       </div>
-      <Footer />
     </div>
+      <Footer/>
+    </>
   );
 };
 
