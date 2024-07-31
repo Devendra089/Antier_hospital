@@ -118,52 +118,93 @@
 // export default HomePage;
 
 
-import React from "react";
-import { Link } from "react-router-dom"; // Use the correct import path for Link
+// import React from "react";
+// import { Link } from "react-router-dom"; // Use the correct import path for Link
 
-import CertificatesData from "../data/CertificatesData"; // Import data file
-// import classes from "../assets/css/certificateCard.module.css";
-import homeImage from "../assets/imgs/rm373batch2-04.jpg";
+// import CertificatesData from "../data/CertificatesData"; // Import data file
+// // import classes from "../assets/css/certificateCard.module.css";
+// import homeImage from "../assets/imgs/rm373batch2-04.jpg";
+// import Navbar from "./homenavbar";
+// import logo from "../assets/imgs/image-removebg-preview.png"; // Adjust path to your logo image
+// import Footer from "./footer";
+// import '../assets/css/home.css';
+
+// const HomePage = () => {
+//   return (
+//     // <div style={{ backgroundImage: `url(${homeImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', minHeight: '100vh' }}>
+//     // <div id="apt-container">
+//     <>
+//       <div id="apt-container">
+//         <Navbar/>
+//         <div className="gradient-cards">
+//           {CertificatesData.certificationsList.map((certificate, index) => (
+//             <div className="card" key={index}>
+//               <div className="container-card">
+//                 <div className="title-and-link">
+//                   <p className="card-title">{certificate.title}</p>
+//                   {/* Use a button instead of a link to handle actions within the same page */}
+//                   <button
+//                     onClick={() => {
+//                       // Open the certificate link in a new tab or handle it differently
+//                       window.location.href = certificate.link;
+//                     }}
+//                     style={{ color: 'cyan', border: 'none', background: 'none', cursor: 'pointer' }}
+//                     id='overlay-text'
+//                   >
+//                     Click Here
+//                   </button>
+//                 </div>
+//                 <p className="card-description">{certificate.instructor}</p>
+//               </div>
+//             </div>
+//           ))}
+//         {/* </div> */}
+//       {/* </div> */}
+//       </div>
+//     </div>
+//       <Footer/>
+//     </>
+//   );
+// };
+
+// export default HomePage;
+
+
+
+import React from "react";
+import CertificatesData from "../data/CertificatesData";
 import Navbar from "./homenavbar";
-import logo from "../assets/imgs/image-removebg-preview.png"; // Adjust path to your logo image
 import Footer from "./footer";
 import '../assets/css/home.css';
 
 const HomePage = () => {
+  const handleMouseEnter = (link) => {
+    window.location.href = link;
+  };
+
   return (
-    // <div style={{ backgroundImage: `url(${homeImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', minHeight: '100vh' }}>
-    // <div id="apt-container">
     <>
-      <div id="apt-container">
-        <Navbar/>
-        <div className="gradient-cards">
-          {CertificatesData.certificationsList.map((certificate, index) => (
-            <div className="card" key={index}>
-              <div className="container-card">
-                <div className="title-and-link">
-                  <p className="card-title">{certificate.title}</p>
-                  {/* Use a button instead of a link to handle actions within the same page */}
-                  <button
-                    onClick={() => {
-                      // Open the certificate link in a new tab or handle it differently
-                      window.location.href = certificate.link;
-                    }}
-                    style={{ color: 'cyan', border: 'none', background: 'none', cursor: 'pointer' }}
-                    id='overlay-text'
-                  >
-                    Click Here
-                  </button>
-                </div>
+    <div id="apt-container">
+      <Navbar/>
+      <div className="gradient-cards">
+        {CertificatesData.certificationsList.map((certificate, index) => (
+          <div 
+            className="card" 
+            key={index}
+            onClick={() => handleMouseEnter(certificate.link)}
+          >
+            <div className="container-card">
+              <div className="card-content">
+                <p className="card-title">{certificate.title}</p>
                 <p className="card-description">{certificate.instructor}</p>
               </div>
             </div>
-          ))}
-        {/* </div> */}
-      {/* </div> */}
+          </div>
+        ))}
       </div>
     </div>
       <Footer/>
-    </>
+     </>
   );
 };
 

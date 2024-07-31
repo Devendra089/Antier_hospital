@@ -27,6 +27,7 @@ body {
   }
   
   .gradient-cards {
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
@@ -50,10 +51,11 @@ body {
   .card {
     max-width: 550px;
     border: 0;
-    width: 100%;
+    width: 80%;
     margin-inline: auto;
     transform: none;
     transition: none;
+    margin-top: 20%;
   }
   
   .container-card {
@@ -61,7 +63,7 @@ body {
     border: 2px solid transparent;
     background: linear-gradient(71deg, #414041, #1a171c, #232224);
     background-clip: padding-box;
-    /* border-radius: 45px; */
+    border-radius: 15px;
     padding: 40px;
     img {
       margin-bottom: 32px;

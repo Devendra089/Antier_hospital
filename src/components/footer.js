@@ -11,16 +11,16 @@ const Footer = () => {
 					<li>
 						{/* eslint-disable-next-line */}
 						<a
-							href="https://twitter.com/who?lang=en"
+							href="https://www.linkedin.com/company/antiersolutions/"
 							target="_blank"
-							aria-label="Twitter">
-							<i className={"fab fa-twitter foot-icon"}></i>
+							aria-label="Linkedin">
+							<i className={"fab fa-linkedin foot-icon"}></i>
 						</a>
 					</li>
 					<li>
 						{/* eslint-disable-next-line */}
 						<a
-							href="https://www.facebook.com/WHO/"
+							href="https://www.facebook.com/antiersolutions"
 							target="_blank"
 							aria-label="Facebook">
 							<i className={"fab fa-facebook-f foot-icon"}></i>
@@ -29,7 +29,7 @@ const Footer = () => {
 					<li>
 						{/* eslint-disable-next-line */}
 						<a
-							href="https://www.instagram.com/who/?hl=en"
+							href="https://www.instagram.com/antiersolutions/"
 							target="_blank"
 							aria-label="Instagram">
 							<i className={"fab fa-instagram foot-icon"}></i>
