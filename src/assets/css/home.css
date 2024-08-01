@@ -30,11 +30,13 @@ body {
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    /* gap: 10px; */
     padding: 30px;
     @media screen and (max-width: 991px) {
       grid-template-columns: 1fr;
     }
+    /* width: 80%; */
+    /* justify-content: center; */
 
   }
   

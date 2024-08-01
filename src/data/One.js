@@ -58,7 +58,7 @@
 //       />
 //       <h1 style={{color: 'white'}}>Enter Details</h1>
 //       <div className={classes.contactFormCard}>
-        
+
 //         <form onFocus={formFocussedHandler} onSubmit={handleSubmit} className={classes.contactForm}>
 //           <label>
 //             <textarea
@@ -165,10 +165,10 @@ const One = (props) => {
                     "Are You Sure You Want To Leave? All your entered data will be lost!"
                 }
             />
-            <h1 style={{color: 'black'}}>Enter Details</h1>
+            <h1 style={{ color: 'black' }}>Enter Details</h1>
             <div className={classes.contactFormCard}>
                 <form onFocus={formFocussedHandler} onSubmit={handleSubmit} className={classes.contactForm}>
-                    <label>
+                    {/* <label>
                         <textarea
                             className={classes.Inputs}
                             name="Description"
@@ -181,8 +181,50 @@ const One = (props) => {
                             }
                             value={inputdata.description}
                         />
-                    </label>
-                    <label>
+                    </label> */}
+
+
+
+                    <div className={classes.Inputs}>
+                        {/* <i className="fa fa-user icon"></i> */}
+                        {/* <p>Description</p> */}
+                        <textarea
+                            type="text"
+                            // name="name"
+                            placeholder="Description"
+                            // value={appointment.name}
+                            className={classes.Input}
+                            required
+                            onChange={(e) =>
+                                setinputData({
+                                    ...inputdata,
+                                    description: e.target.value
+                                })
+                            }
+                        />
+                    </div>
+                    <div className={classes.Inputs}>
+                        {/* <i className="fa fa-user icon"></i> */}
+                        {/* <p>Description</p> */}
+                        <textarea
+                            type="text"
+                            // name="name"
+                            placeholder="RO Remarks"
+                            // value={appointment.name}
+                            className={classes.Input}
+                            required
+                            onChange={(e) =>
+                                setinputData({
+                                    ...inputdata,
+                                    description: e.target.value
+                                })
+                            }
+                        />
+                    </div>
+
+
+
+                    {/* <label>
                         <input
                             type="text"
                             className={classes.Inputs}
@@ -196,8 +238,9 @@ const One = (props) => {
                             }
                             value={inputdata.input1}
                         />
-                    </label>
-                    <div className="btndiv" style={{display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '16px', marginTop: '20px' , marginLeft:'10px'}}>
+                    </label> */}
+
+                    <div className="btndiv" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '16px', marginTop: '20px', marginLeft: '10px' }}>
                         <div className="sendBtn">
                             <button type="reset" onClick={resetform}>
                                 Clear

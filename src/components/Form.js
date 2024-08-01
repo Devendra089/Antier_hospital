@@ -66,20 +66,26 @@ const Form = () => {
 
     return (
         <>
-        <div className={classes.hyundaibody} id='apt-container'>
-            <Navbar />
-            <div className={classes.getInTouch}>
-                <div className="oneform">
-                    <One onDataReceive={onDataReceive} />
-                </div>
-                {isFormOneSubmitted && (
-                    <div className='twoform' style={{ marginTop: '20px' }}>   
-                        <Two apiData={apiData} />
+            <div className={classes.hyundaibody} id='apt-container'>
+                <Navbar />
+                <div style={{display:'flex'}}>
+                    <div className={classes.getInTouch}>
+                        <div className="oneform">
+                            <One onDataReceive={onDataReceive} />
+                        </div>
                     </div>
-                )}
+                    {isFormOneSubmitted && (
+                    // <div className={classes.getInTouch}>
+                        
+                            <div className={classes.getInTouch} style={{ marginTop: '80px',  }}>
+                                <h2>Details</h2>
+                                <Two apiData={apiData} />
+                            </div>
+                        )}
+                    {/* </div> */}
+                </div>
             </div>
-        </div>
-            <Footer style={{}}/>
+            <Footer style={{}} />
         </>
     );
 };

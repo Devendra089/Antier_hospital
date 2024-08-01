@@ -5,7 +5,7 @@
 }
 #super-container {
     width: 100%;
-    background: #000046; /* fallback for old browsers */
+    background: #6565e0; /* fallback for old browsers */
     background: -webkit-linear-gradient(
         to right,
         #1cb5e0,

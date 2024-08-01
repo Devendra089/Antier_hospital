@@ -4,10 +4,10 @@
   font-size: 16px;
   /* border-radius: 320px; 16px * 20 */
   padding: 16px;
-  background-color: #EBECF0;
-  text-shadow: 1px 1px 0 #FFF;
+  /* background-color: #EBECF0; */
+  /* text-shadow: 1px 1px 0 #FFF; */
 }
-  
+
   
  label {
   display: block;
@@ -25,7 +25,7 @@
 
 .Inputs {
   margin-right: 8px; /* 16px / 2 */
-  box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+  /* box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF; */
   width: 100%;
   box-sizing: border-box;
   transition: all 0.2s ease-in-out;
