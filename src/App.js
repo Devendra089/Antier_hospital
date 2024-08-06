@@ -19,6 +19,7 @@ import Patient from "./components/patient";
 import  { Toaster } from "react-hot-toast"
 import scroll from "./assets/css/form.css"
 import Formpage from "./components/Form";
+// import subm from "./components/Form";
 
 const App = () => {
 	const [user, setUser] = useState({});
@@ -48,6 +49,7 @@ const App = () => {
 						<Route path={"/service-insight-pro"} exact> 
 							<Formpage/>
 						</Route>
+						
 						<Route path={"/doctor"}>
 							<DoctorList/>
 						</Route>

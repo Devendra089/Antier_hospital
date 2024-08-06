@@ -69,6 +69,9 @@ const Form = () => {
             <div className={classes.hyundaibody} id='apt-container'>
                 <Navbar />
                 {/* <br/> */}
+                <p id={"Appointment-sub-head"} >
+					Welcome to the AI/ML Maruti demo
+				</p> 
                 <div className="description-card">
 					<h2>Project Description</h2>
 					<p>
@@ -86,7 +89,7 @@ const Form = () => {
                     // <div className={classes.getInTouch}>
                         
                             <div className={classes.getInTouch} style={{ marginTop: '80px',  }}>
-                                <h2>Details</h2>
+                                {/* <h2>Details</h2> */}
                                 <Two apiData={apiData} />
                             </div>
                         )}

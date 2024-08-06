@@ -53,6 +53,9 @@ const LandingPage = () => {
 			<div id={"apt-container"}>
 				<Navbar />
 				<br />
+				<p id={"Appointment-sub-head"} >
+					Welcome to the AI/ML Appointment booking demo
+				</p> 
 				<div className="description-card">
 					<h2>Project Description</h2>
 					<p>
@@ -62,10 +65,10 @@ const LandingPage = () => {
 						and TXT files for data storage.
 					</p>
 				</div>
-				<h1 id={"welcome-head"}>Welcome!</h1>
+				{/* <h1 id={"welcome-head"}>Welcome!</h1>
 				<p id={"Appointment-sub-head"}>
 					Book your appointments here.
-				</p>
+				</p> */}
 				<button id={"apt-bookmore-btn"} onClick={BookMore}>
 					Book Appointment
 				</button>

@@ -114,10 +114,13 @@
 
 // export default One;
 
+
 import React, { Fragment, useState } from "react";
-import { Prompt } from "react-router-dom";
+import { Prompt} from "react-router-dom";
 import classes from "./one.module.css";
 import axios from "axios";
+// import { useNavigate } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
 const One = (props) => {
     const [isEntering, setIsEntering] = useState(false);
@@ -127,6 +130,8 @@ const One = (props) => {
         description: "",
         input1: ""
     });
+
+    const navigate = useHistory();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -157,6 +162,12 @@ const One = (props) => {
         setIsEntering(true);
     };
 
+    const routechange = () => {
+        const path = '/';
+        navigate.push(path);
+    }
+
+
     return (
         <Fragment>
             <Prompt
@@ -165,14 +176,16 @@ const One = (props) => {
                     "Are You Sure You Want To Leave? All your entered data will be lost!"
                 }
             />
-            <h1 style={{ color: 'black' }}>Enter Details</h1>
+            <h1 className={classes.heading}>Enter Details</h1>
             <div className={classes.contactFormCard}>
                 <form onFocus={formFocussedHandler} onSubmit={handleSubmit} className={classes.contactForm}>
-                    {/* <label>
-                        <textarea
-                            className={classes.Inputs}
-                            name="Description"
-                            placeholder="Description"
+                    <div className={classes.Inputs}>
+                        <p className={classes.label}>Description</p>
+                        <input
+                            type="text"
+                            // placeholder="Description"
+                            className={classes.Input}
+                            required
                             onChange={(e) =>
                                 setinputData({
                                     ...inputdata,
@@ -181,55 +194,15 @@ const One = (props) => {
                             }
                             value={inputdata.description}
                         />
-                    </label> */}
-
-
-
-                    <div className={classes.Inputs}>
-                        {/* <i className="fa fa-user icon"></i> */}
-                        {/* <p>Description</p> */}
-                        <textarea
-                            type="text"
-                            // name="name"
-                            placeholder="Description"
-                            // value={appointment.name}
-                            className={classes.Input}
-                            required
-                            onChange={(e) =>
-                                setinputData({
-                                    ...inputdata,
-                                    description: e.target.value
-                                })
-                            }
-                        />
+                        <p className={classes.example}>Example: 1.customer complaint that he went to workshop for front wind shield glass replacement 2. as per voc workshop told that part is not available from hyundai and there is no update about part availability</p>
                     </div>
                     <div className={classes.Inputs}>
-                        {/* <i className="fa fa-user icon"></i> */}
-                        {/* <p>Description</p> */}
-                        <textarea
-                            type="text"
-                            // name="name"
-                            placeholder="RO Remarks"
-                            // value={appointment.name}
-                            className={classes.Input}
-                            required
-                            onChange={(e) =>
-                                setinputData({
-                                    ...inputdata,
-                                    description: e.target.value
-                                })
-                            }
-                        />
-                    </div>
-
-
-
-                    {/* <label>
+                        <p className={classes.label}>Regional Officer Remarks</p>
                         <input
                             type="text"
-                            className={classes.Inputs}
-                            placeholder="RO Remarks"
-                            disabled={isSent}
+                            // placeholder="Regional Officer (RO) remarks"
+                            className={classes.Input}
+                            required
                             onChange={(e) =>
                                 setinputData({
                                     ...inputdata,
@@ -238,15 +211,15 @@ const One = (props) => {
                             }
                             value={inputdata.input1}
                         />
-                    </label> */}
-
-                    <div className="btndiv" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '16px', marginTop: '20px', marginLeft: '10px' }}>
-                        <div className="sendBtn">
-                            <button type="reset" onClick={resetform}>
+                        <p className={classes.example} >Example: vehicle pickup, work under process. inform to cust. : Windshield replacement in insurance under process</p>
+                    </div>
+                    <div className={classes.btnDiv}>
+                        <div className={classes.sendBtn}>
+                            <button type="reset" onClick={routechange}>
                                 Clear
                             </button>
                         </div>
-                        <div className="sendBtn">
+                        <div className={classes.sendBtn}>
                             <button type="submit" disabled={isSent}>
                                 {btnText}
                             </button>

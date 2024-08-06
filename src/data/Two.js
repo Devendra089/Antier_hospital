@@ -293,7 +293,115 @@
 
 
 
-import React, { Fragment, useState, useEffect } from "react";
+// import React, { Fragment, useState, useEffect } from "react";
+// import { Prompt } from "react-router-dom";
+// import classes from "./two.module.css";
+// import useInput from "../hooks/useinputs";
+
+// const Two = (props) => {
+//     const { apiData } = props;
+//     const [isEntering, setIsEntering] = useState(false);
+//     console.log("after submit" + props);
+
+//     const { value: enteredName,
+//         hasError: nameInputHasError,
+//         isValid: enteredNameIsValid,
+//         valueChangeHandler: nameChangedHandler,
+//         inputBlurHandler: nameBlurHandler,
+//     } = useInput(value => value.trim() !== '');
+
+//     const nameInputClasses = nameInputHasError ? `${classes.Inputs} ${classes.invalidInput}` : classes.Inputs;
+
+//     const topCategoryType = apiData ? apiData['topCategoryType'] : '';
+//     const topArea = apiData ? apiData['topArea'] : '';
+//     const topSubArea = apiData ? apiData['topSubArea'] : '';
+//     const secondaryCategoryTypes = apiData ? apiData['secondryCategoryTypes'] : '';
+//     const secondaryAreas = apiData ? apiData['secondryAreas'] : '';
+//     const secondarySubAreas = apiData ? apiData['secondrySubAreas'] : '';
+
+//     // Function to clear the form and reload the page
+//     const handleClear = () => {
+//         window.location.reload();
+//     };
+
+//     return (
+//         <Fragment>
+//             <Prompt when={isEntering} message={(location) =>
+//                 'Are You Sure You Want To Leave? All your entered data will be lost!'}
+//             />
+//             <div className={classes.contactFormCard}>
+//                 <form>
+//                     <label>
+//                     <p className={classes.example}>Top Category Type</p>
+//                         <input 
+//                             type="text"
+//                             className={nameInputClasses}
+//                             placeholder="Top Category Type"
+//                             value={topCategoryType}
+//                         /> 
+//                     </label>
+                    
+//                     <label>
+//                     <p className={classes.example}>Top Area</p>
+//                         <input 
+//                             type="text"
+//                             className={nameInputClasses}
+//                             placeholder="Top Area"
+//                             value={topArea}
+//                         />
+//                     </label>
+//                     <label>
+//                     <p className={classes.example}>Top Sub Area</p>
+//                         <input
+//                             type="text"
+//                             className={nameInputClasses}
+//                             placeholder="Top Sub Area"
+//                             value={topSubArea}
+//                         />
+//                     </label>
+//                     <label>
+//                     <p className={classes.example}>Secondary Category Types</p>
+//                         <input
+//                             type="text"
+//                             className={nameInputClasses}
+//                             placeholder="Secondary Category Types"
+//                             value={secondaryCategoryTypes}
+//                         />
+//                     </label>
+//                     <label>
+//                     <p className={classes.example}>Secondary Areas</p>
+//                         <input 
+//                             type="text"
+//                             className={nameInputClasses}
+//                             placeholder="Secondary Areas"
+//                             value={secondaryAreas}
+//                         />
+//                     </label>
+//                     <label>
+//                     <p className={classes.example}>Secondary Sub Areas</p>
+//                         <input 
+//                             type="text"
+//                             className={nameInputClasses}
+//                             placeholder="Secondary Sub Areas"
+//                             value={secondarySubAreas}
+//                         />
+//                     </label>
+//                     <br />
+//                     <div className={classes.sendBtn}>
+//                         <button type="button" onClick={handleClear}>Clear</button>
+//                         {/* Add other buttons or elements here */}
+//                     </div>
+//                 </form>
+//             </div>
+//         </Fragment>
+//     );
+// };
+
+// export default Two;
+
+
+
+import React, { Fragment, useState } from "react";
 import { Prompt } from "react-router-dom";
 import classes from "./two.module.css";
 import useInput from "../hooks/useinputs";
@@ -324,67 +432,90 @@ const Two = (props) => {
         window.location.reload();
     };
 
+    const formFocussedHandler = () => {
+        setIsEntering(true);
+    };
+
     return (
         <Fragment>
             <Prompt when={isEntering} message={(location) =>
                 'Are You Sure You Want To Leave? All your entered data will be lost!'}
             />
+            <h2 style={{ color: 'black' }}>Predictions</h2>
+            <h5 className={classes.label} style={{marginRight: '220px'}} >Top Predictions</h5>
             <div className={classes.contactFormCard}>
-                <form>
-                    <label>
+                <form onFocus={formFocussedHandler} className={classes.contactForm}>
+                    <div className={classes.Inputs}>
+                        <p className={classes.label}>Top Category Type</p>
                         <input 
                             type="text"
-                            className={nameInputClasses}
+                            className={classes.Input}
                             placeholder="Top Category Type"
                             value={topCategoryType}
                         /> 
-                    </label>
-                    <label>
+                    </div>
+                    <div className={classes.Inputs}>
+                        <p className={classes.label}>Top Area</p>
                         <input 
                             type="text"
-                            className={nameInputClasses}
+                            className={classes.Input}
                             placeholder="Top Area"
                             value={topArea}
                         />
-                    </label>
-                    <label>
+                    </div>
+                    <div className={classes.Inputs}>
+                        <p className={classes.label}>Top Sub Area</p>
                         <input
                             type="text"
-                            className={nameInputClasses}
+                            className={classes.Input}
                             placeholder="Top Sub Area"
                             value={topSubArea}
                         />
-                    </label>
-                    <label>
+                    </div>
+
+                    </form>
+
+
+            </div>
+
+                    <h5 className={classes.label} style={{marginRight: '150px', marginTop: '20px' }} >Secondary Predictions</h5>
+                    <div className={classes.contactFormCard}>
+                    <form onFocus={formFocussedHandler} className={classes.contactForm}>
+
+                    <div className={classes.Inputs}>
+                        <p className={classes.label}>Secondary Category Types</p>
                         <input
                             type="text"
-                            className={nameInputClasses}
+                            className={classes.Input}
                             placeholder="Secondary Category Types"
                             value={secondaryCategoryTypes}
                         />
-                    </label>
-                    <label>
+                    </div>
+                    <div className={classes.Inputs}>
+                        <p className={classes.label}>Secondary Areas</p>
                         <input 
                             type="text"
-                            className={nameInputClasses}
+                            className={classes.Input}
                             placeholder="Secondary Areas"
                             value={secondaryAreas}
                         />
-                    </label>
-                    <label>
+                    </div>
+                    <div className={classes.Inputs}>
+                        <p className={classes.label}>Secondary Sub Areas</p>
                         <input 
                             type="text"
-                            className={nameInputClasses}
+                            className={classes.Input}
                             placeholder="Secondary Sub Areas"
                             value={secondarySubAreas}
                         />
-                    </label>
-                    <br />
-                    <div className={classes.sendBtn}>
-                        <button type="button" onClick={handleClear}>Clear</button>
+                    </div>
+                    <div className={classes.btndiv}>
+                        {/* <button type="button" onClick={handleClear}>Clear</button> */}
                         {/* Add other buttons or elements here */}
                     </div>
                 </form>
+
+
             </div>
         </Fragment>
     );

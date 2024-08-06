@@ -1,72 +1,73 @@
-.Inputs {
-  border: 0;
-  outline: 0;
-  font-size: 16px;
-  /* border-radius: 320px; 16px * 20 */
-  padding: 16px;
-  /* background-color: #EBECF0; */
-  /* text-shadow: 1px 1px 0 #FFF; */
+.contactFormCard {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
 }
 
-  
- label {
-  display: block;
-  margin-bottom: 16px*1.5;
-  width: 100%;
+.heading {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.Inputs{
-  font-family: 'Montserrat', sans-serif;
-    letter-spacing: -0.2px;
-    font-size: 16px;
-    width: 100%;
+.contactForm {
+  display: flex;
+  flex-direction: column;
 }
-
 
 .Inputs {
-  margin-right: 8px; /* 16px / 2 */
-  /* box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF; */
+  margin-bottom: 20px;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.Input {
   width: 100%;
-  box-sizing: border-box;
-  transition: all 0.2s ease-in-out;
-  appearance: none;
-  -webkit-appearance: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 6rem;
 }
 
-.btndiv{
-  display: flex;
+.example {
+  font-size: 0.7em;
+  color: #666;
+  /* background-color: #eef; */
+  /* padding: 10px; */
+  /* border-left: 4px solid #464748; */
+  border-radius: 4px;
 }
 
-
-.btndiv {
+.btnDiv {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  gap: 16px; /* Adds space between the buttons, adjust as needed */
+  gap: 16px;
   margin-top: 20px;
 }
 
-.sendBtn {
-  /* Optional: Add styling to the sendBtn wrapper if needed */
-}
-
-button {
-  /* Style your button here if needed, for example: */
+.sendBtn button {
   padding: 10px 20px;
-  border-radius: 4px;
   border: none;
-  background-color: #505152;
-  color: #FFF;
-  font-size: 16px;
+  border-radius: 4px;
+  background-color: #3180d4;
+  color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 1em;
+  transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #929395;
+.sendBtn button:disabled {
+  background-color: #ccc;
 }
 
-button:disabled {
-  background-color: #494545;
-  cursor: not-allowed;
+.sendBtn button:hover:not(:disabled) {
+  background-color: #0056b3;
 }

@@ -64,7 +64,7 @@
 }
 
 .getInTouch {
-	margin:5rem auto;
+	margin: 5rem auto;
 	margin-bottom: 0rem;
 	/* padding: 2rem; */
 	width: 35%;
@@ -158,4 +158,11 @@
     min-height: 100vh; /* Cover the full viewport height */
     display: flex;
     flex-direction: column; /* Stack child elements vertically */
+}
+
+#Appointment-sub-head {
+	font-family: "Varela Round", sans-serif;
+	/* font-weight: bold; */
+	color: #eee;
+	font-size: 2rem;
 }
