@@ -6,7 +6,7 @@ const certificationsList = [
     {
         title: "Hospital POC",
         image: "",
-        instructor: "This project is a hospital appointment management system that automates the booking process based on patient symptoms and doctor availability using Flask, OpenAI API, and various data storage formats (TXT, JSON). The tech stack includes Python, Flask, OpenAI, JSON, and TXT files for data storage.",
+        instructor: "This project is a hospital appointment management system that automates the booking process based on patient symptoms and doctor availability by using   Flask, OpenAI API, and various data storage formats (TXT, JSON). The tech stack includes Python, Flask, OpenAI, JSON, and TXT files for data storage.",
         link: "/appointmentpage",
         platform: 'udemy'
     },

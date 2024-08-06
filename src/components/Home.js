@@ -184,27 +184,27 @@ const HomePage = () => {
 
   return (
     <>
-    <div id="apt-container">
-      <Navbar/>
-      <div className="gradient-cards">
-        {CertificatesData.certificationsList.map((certificate, index) => (
-          <div 
-            className="card" 
-            key={index}
-            onClick={() => handleMouseEnter(certificate.link)}
-          >
-            <div className="container-card">
-              <div className="card-content">
-                <p className="card-title">{certificate.title}</p>
-                <p className="card-description">{certificate.instructor}</p>
+      <div id="apt-container">
+        <Navbar />
+        <div className="gradient-cards">
+          {CertificatesData.certificationsList.map((certificate, index) => (
+            <div
+              className="card"
+              key={index}
+              onClick={() => handleMouseEnter(certificate.link)}
+            >
+              <div className="container-card">
+                <div className="card-content">
+                  <p className="card-title">{certificate.title}</p>
+                  <p className="card-description">{certificate.instructor}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-      <Footer/>
-     </>
+      <Footer />
+    </>
   );
 };
 

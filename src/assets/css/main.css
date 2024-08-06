@@ -514,3 +514,27 @@ header {
 .logo{
 	width: 30%;
 }
+
+
+/* landingPage.css */
+.description-card {
+	/* background-color: #f5f5f5; */
+	border-radius: 8px;
+	padding: 20px;
+	margin: 20px auto;
+	max-width: 90%;
+	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .description-card h2 {
+	margin-top: 0;
+	font-size: 24px;
+	color: #ffffff;
+  }
+  
+  .description-card p {
+	font-size: 16px;
+	color: #fefefe;
+	line-height: 1.5;
+  }
+  

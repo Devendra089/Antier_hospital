@@ -68,6 +68,17 @@ const Form = () => {
         <>
             <div className={classes.hyundaibody} id='apt-container'>
                 <Navbar />
+                {/* <br/> */}
+                <div className="description-card">
+					<h2>Project Description</h2>
+					<p>
+						This project is a hospital appointment management system that automates the booking process
+						based on patient symptoms and doctor availability by using Flask, OpenAI API, and various
+						data storage formats (TXT, JSON). The tech stack includes Python, Flask, OpenAI, JSON,
+						and TXT files for data storage.
+					</p>
+				</div>
+
                 <div style={{display:'flex'}}>
                     <div className={classes.getInTouch}>
                         <div className="oneform">
