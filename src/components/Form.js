@@ -72,10 +72,8 @@ const Form = () => {
                 <div className="description-card">
 					<h2>Project Description</h2>
 					<p>
-						This project is a hospital appointment management system that automates the booking process
-						based on patient symptoms and doctor availability by using Flask, OpenAI API, and various
-						data storage formats (TXT, JSON). The tech stack includes Python, Flask, OpenAI, JSON,
-						and TXT files for data storage.
+                    Maruti POC",
+                    instructor: "Developed a proof of concept for classifying Maruti's Voice of Customer feedback into subcategories of Area, Sub-Area, and Domain, improving the analysis and addressing customer concerns efficiently, used Gradiant Boosting and N-gram for classification.
 					</p>
 				</div>
 
