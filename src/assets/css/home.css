@@ -58,12 +58,15 @@ body {
     transform: none;
     transition: none;
     margin-top: 20%;
+    background: linear-gradient(71deg, #414041, #1a171c, #232224);
+    border: 2px solid white;
+    border-radius: 15px;
   }
   
   .container-card {
     position: relative;
     border: 2px solid transparent;
-    background: linear-gradient(71deg, #414041, #1a171c, #232224);
+    /* background: linear-gradient(71deg, #414041, #1a171c, #232224); */
     background-clip: padding-box;
     border-radius: 15px;
     padding: 40px;

@@ -19,9 +19,10 @@ const Hyundainavbar = () => {
 				<a href={"/"}> <img src={logo} alt="Health Insurance" className="logo" style={{marginLeft: '15px'}}/> </a>
 			</div>
 			<ul className={"nav-links"}>
-				{/* <li>
+				<li>
 					<a href={"/"}>Home</a>
 				</li>
+				{/* 
 				<li>
 					<a href={"/"}>Lorem</a>
 				</li>

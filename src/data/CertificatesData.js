@@ -4,15 +4,15 @@ import marutiImage from '../assets/imgs/maruti.jpg';
 
 const certificationsList = [
     {
-        title: "Hospital poc",
+        title: "Hospital POC",
         image: "",
-        instructor: "Hubble’s capital-efficient 110% collateral ratio lets users leverage up to 11x on their deposits.",
+        instructor: "This project is a hospital appointment management system that automates the booking process based on patient symptoms and doctor availability using Flask, OpenAI API, and various data storage formats (TXT, JSON). The tech stack includes Python, Flask, OpenAI, JSON, and TXT files for data storage.",
         link: "/appointmentpage",
         platform: 'udemy'
     },
     {
-        title: "Maruti poc",
-        instructor: "Hubble’s capital-efficient 110% collateral ratio lets users leverage up to 11x on their deposits.",
+        title: "Maruti POC",
+        instructor: "Developed a proof of concept for classifying Maruti's Voice of Customer feedback into subcategories of Area, Sub-Area, and Domain, improving the analysis and addressing customer concerns efficiently, used Gradiant Boosting and N-gram for classification.",
         image: "",
         link: "/service-insight-pro",
         platform: 'udemy'
