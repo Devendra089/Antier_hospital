@@ -72,8 +72,7 @@ const Form = () => {
                 <div className="description-card">
 					<h2>Project Description</h2>
 					<p>
-                    Maruti POC",
-                    instructor: "Developed a proof of concept for classifying Maruti's Voice of Customer feedback into subcategories of Area, Sub-Area, and Domain, improving the analysis and addressing customer concerns efficiently, used Gradiant Boosting and N-gram for classification.
+                   Developed a proof of concept for classifying Maruti's Voice of Customer feedback into subcategories of Area, Sub-Area, and Domain, improving the analysis and addressing customer concerns efficiently, used Gradiant Boosting and N-gram for classification.
 					</p>
 				</div>
 
