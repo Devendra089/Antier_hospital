@@ -55,11 +55,21 @@ const Form = () => {
     const [apiData, setApiData] = useState(null);
     const [isFormOneSubmitted, setIsFormOneSubmitted] = useState(false);
 
+    const [disable, setdisable] = useState(false);
+
     const onDataReceive = (data) => {
         setApiData(data);
         setIsFormOneSubmitted(true); // Indicate that form one is submitted
         // console.log("parent data", data);
+        setdisable(false);
+
     };
+    const onClear = () =>{
+        setIsFormOneSubmitted(false);
+
+        setdisable(true);
+    }
+
 
     console.log("check submit ", isFormOneSubmitted);
 
@@ -82,18 +92,15 @@ const Form = () => {
                 <div style={{display:'flex'}}>
                     <div className={classes.getInTouch}>
                         <div className="oneform">
-                            <One onDataReceive={onDataReceive} />
+                            <One onDataReceive={onDataReceive} onClear={onClear}/>
                         </div>
                     </div>
-                    {isFormOneSubmitted && (
-                    // <div className={classes.getInTouch}>
+                    {(isFormOneSubmitted && !disable) && (
                         
                             <div className={classes.getInTouch} style={{ marginTop: '80px',  }}>
-                                {/* <h2>Details</h2> */}
                                 <Two apiData={apiData} />
                             </div>
                         )}
-                    {/* </div> */}
                 </div>
             </div>
             <Footer style={{}} />

@@ -147,7 +147,7 @@ const One = (props) => {
             }
             resetform();
         } catch (error) {
-            console.error("Some error occurred while making appointment", error);
+            console.error("Some error occurred while making prediction", error);
         }
     };
 
@@ -162,11 +162,16 @@ const One = (props) => {
         setIsEntering(true);
     };
 
-    const routechange = () => {
-        const path = '/';
-        navigate.push(path);
-    }
+    // const routechange = () => {
+    //     const path = '/';
+    //     navigate.push(path);
+    // }
 
+    const handleclear =()=>{
+        resetform();
+        setIsSent(false);
+        props.onClear();
+    }
 
     return (
         <Fragment>
@@ -215,7 +220,7 @@ const One = (props) => {
                     </div>
                     <div className={classes.btnDiv}>
                         <div className={classes.sendBtn}>
-                            <button type="reset" onClick={routechange}>
+                            <button type="reset" onClick={handleclear}>
                                 Clear
                             </button>
                         </div>
