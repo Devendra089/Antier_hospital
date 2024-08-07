@@ -149,7 +149,7 @@ body {
   .container-card {
     padding: 20px;
     position: relative;
-    transition: none;
+    /* transition: none; */
     animation: none;
   }
   .card-content {

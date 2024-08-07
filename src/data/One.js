@@ -116,11 +116,13 @@
 
 
 import React, { Fragment, useState } from "react";
-import { Prompt} from "react-router-dom";
+import { Prompt } from "react-router-dom";
 import classes from "./one.module.css";
 import axios from "axios";
 // import { useNavigate } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
+import certificate from "./CertificatesData";
+
 
 const One = (props) => {
     const [isEntering, setIsEntering] = useState(false);
@@ -145,7 +147,7 @@ const One = (props) => {
                 localStorage.setItem("responseData", JSON.stringify(response.data));
                 setIsSent(true); // Indicate that the form has been submitted
             }
-            resetform();
+            // resetform();
         } catch (error) {
             console.error("Some error occurred while making prediction", error);
         }
@@ -167,11 +169,23 @@ const One = (props) => {
     //     navigate.push(path);
     // }
 
-    const handleclear =()=>{
+    const handleclear = () => {
         resetform();
         setIsSent(false);
         props.onClear();
     }
+
+
+    const handleCopyText = (text) => {
+        navigator.clipboard.writeText(text).then(() => {
+            alert("Text copied to clipboard!");
+        }).catch(err => {
+            console.error("Failed to copy text: ", err);
+        });
+    };
+
+    const example1 = "1.customer complaint that he went to workshop for front wind shield glass replacement 2. as per voc workshop told that part is not available from hyundai and there is no update about part availability ";
+    const example2 = "vehicle pickup, work under process. inform to cust. : Windshield replacement in insurance under process "
 
     return (
         <Fragment>
@@ -199,7 +213,16 @@ const One = (props) => {
                             }
                             value={inputdata.description}
                         />
-                        <p className={classes.example}>Example: 1.customer complaint that he went to workshop for front wind shield glass replacement 2. as per voc workshop told that part is not available from hyundai and there is no update about part availability</p>
+                        <p className={classes.example}>Example: {example1} 
+                        <span className="copy-text-button"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                handleCopyText(example1);
+                            }}
+                            style={{ color: 'black', textDecoration: 'underline', cursor: 'pointer' }} >
+                            Copy Text
+                        </span>
+                        </p>
                     </div>
                     <div className={classes.Inputs}>
                         <p className={classes.label}>Regional Officer Remarks</p>
@@ -216,7 +239,16 @@ const One = (props) => {
                             }
                             value={inputdata.input1}
                         />
-                        <p className={classes.example} >Example: vehicle pickup, work under process. inform to cust. : Windshield replacement in insurance under process</p>
+                        <p className={classes.example} >Example: {example2}
+                        <span className="copy-text-button"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                handleCopyText(example2);
+                            }}
+                            style={{ color: 'black', textDecoration: 'underline', cursor: 'pointer' }} >
+                            Copy Text
+                        </span>
+                        </p>
                     </div>
                     <div className={classes.btnDiv}>
                         <div className={classes.sendBtn}>

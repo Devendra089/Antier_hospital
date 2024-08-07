@@ -182,49 +182,49 @@ const HomePage = () => {
     window.location.href = link;
   };
 
-  const handleCopyText = (text) => {
-    navigator.clipboard.writeText(text).then(() => {
-      alert("Text copied to clipboard!");
-    }).catch(err => {
-      console.error("Failed to copy text: ", err);
-    });
-  };
+  // const handleCopyText = (text) => {
+  //   navigator.clipboard.writeText(text).then(() => {
+  //     alert("Text copied to clipboard!");
+  //   }).catch(err => {
+  //     console.error("Failed to copy text: ", err);
+  //   });
+  // };
 
   return (
     <>
-    <div id="apt-container">
-      <Navbar/>
-      <div className="gradient-cards">
-        {CertificatesData.certificationsList.map((certificate, index) => (
-          <div 
-            className="card" 
-            key={index}
-            onClick={() => handleMouseEnter(certificate.link)}
-          >
-            <div className="container-card">
-              <div className="card-content">
-                <p className="card-title">{certificate.title}</p>
-                <p className="card-description">{certificate.instructor}
+      <div id="apt-container">
+        <Navbar />
+        <div className="gradient-cards">
+          {CertificatesData.certificationsList.map((certificate, index) => (
+            <div
+              className="card"
+              key={index}
+              onClick={() => handleMouseEnter(certificate.link)}
+            >
+              <div className="container-card">
+                <div className="card-content">
+                  <p className="card-title">{certificate.title}</p>
+                  <p className="card-description">{certificate.instructor}
 
-                </p>
+                  </p>
 
-                <p
-                      className="copy-text-button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleCopyText(certificate.instructor);
-                      }}
-                    style={{color: 'hsla(0, 13%, 94%, 0.942)' , textDecoration:'underline' }} >
-                      Copy Text
-                    </p>
+                  {/* <p
+                    className="copy-text-button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleCopyText(certificate.instructor);
+                    }}
+                    style={{ color: 'hsla(0, 13%, 94%, 0.942)', textDecoration: 'underline' }} >
+                    Copy Text
+                  </p> */}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-      <Footer/>
-     </>
+      <Footer />
+    </>
   );
 };
 
