@@ -177,11 +177,11 @@ const One = (props) => {
 
 
     const handleCopyText = (text) => {
-        navigator.clipboard.writeText(text).then(() => {
+        
             alert("Text copied to clipboard!");
-        }).catch(err => {
-            console.error("Failed to copy text: ", err);
-        });
+        
+            // console.error("Failed to copy text: ");
+       
     };
 
     const example1 = "1.customer complaint that he went to workshop for front wind shield glass replacement 2. as per voc workshop told that part is not available from hyundai and there is no update about part availability ";
@@ -216,7 +216,7 @@ const One = (props) => {
                         <p className={classes.example}>Example: {example1} 
                         <span className="copy-text-button"
                             onClick={(e) => {
-                                e.stopPropagation();
+                                // e.stopPropagation();
                                 handleCopyText(example1);
                             }}
                             style={{ color: 'black', textDecoration: 'underline', cursor: 'pointer' }} >
