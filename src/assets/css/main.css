@@ -212,7 +212,7 @@ body {
 	}
 }
 header {
-	animation: 0.75s ease-out 0s 1 slideInFromLeft;
+	/* animation: 0.75s ease-out 0s 1 slideInFromLeft; */
 }
 
 #book-appointment {
@@ -294,7 +294,7 @@ header {
 }
 
 .card {
-	animation-duration: 2s;
+	/* animation-duration: 2s; */
 	animation-name: slidein;
 	display: inline-block;
 	margin: 5%;
