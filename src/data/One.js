@@ -177,12 +177,20 @@ const One = (props) => {
 
 
     const handleCopyText = (text) => {
-        
-            alert("Text copied to clipboard!");
-        
-            // console.error("Failed to copy text: ");
-       
+        if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                    alert("Text copied to clipboard!");
+                })
+                .catch(err => {
+                    console.error("Failed to copy text: ", err);
+                });
+        } else {
+            console.error("Clipboard API is not supported in this browser.");
+            alert("Sorry, your browser does not support the Clipboard API.");
+        }
     };
+    
 
     const example1 = "1.customer complaint that he went to workshop for front wind shield glass replacement 2. as per voc workshop told that part is not available from hyundai and there is no update about part availability ";
     const example2 = "vehicle pickup, work under process. inform to cust. : Windshield replacement in insurance under process "
