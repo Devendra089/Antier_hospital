@@ -17,13 +17,14 @@ const certificationsList = [
         link: "/service-insight-pro",
         platform: 'udemy'
     },
-    // {
-    //     title: "Heading 1",
-    //     instructor: "Hubble’s capital-efficient 110% collateral ratio lets users leverage up to 11x on their deposits.",
-    //     image: "",
-    //     link: "#",
-    //     platform: 'udemy'
-    // },
+    {
+        title: "Product Detail POC",
+        instructor: "Hubble’s capital-efficient 110% collateral ratio lets users leverage up to 11x on their deposits.",
+        image: "",
+        link: "/producthome",
+        platform: 'udemy'
+    },
+    
     // {
     //     title: "Heading 2",
     //     instructor: "Hubble’s capital-efficient 110% collateral ratio lets users leverage up to 11x on their deposits.",

@@ -442,7 +442,7 @@ const Two = (props) => {
                 'Are You Sure You Want To Leave? All your entered data will be lost!'}
             />
             <h2 style={{ color: 'black' }}>Predictions</h2>
-            <h5 className={classes.label} style={{marginRight: '220px'}} >Top Predictions</h5>
+            <h5 className={classes.label} style={{textAlign: 'left'}} >Top Predictions</h5>
             <div className={classes.contactFormCard}>
                 <form onFocus={formFocussedHandler} className={classes.contactForm}>
                     <div className={classes.Inputs}>
@@ -478,7 +478,7 @@ const Two = (props) => {
 
             </div>
 
-                    <h5 className={classes.label} style={{marginRight: '150px', marginTop: '20px' }} >Secondary Predictions</h5>
+                    <h5 className={classes.label} style={{textAlign: 'left'}} >Secondary Predictions</h5>
                     <div className={classes.contactFormCard}>
                     <form onFocus={formFocussedHandler} className={classes.contactForm}>
 

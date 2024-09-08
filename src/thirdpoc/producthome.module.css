@@ -1,0 +1,73 @@
+.bodycolor {
+  text-align: center;
+  width: 100%;
+  min-height: 70vh; /* Ensure the background covers the full height */
+  background: #000046; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1cb5e0, #000046);
+  background: linear-gradient(to right, #1cb5e0, #000046);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formContainer {
+  display: flex;
+  gap: 2rem; /* Space between the forms */
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contactFormCard {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  text-align: left;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.Inputs {
+  margin-bottom: 15px;
+}
+
+.Input {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.label {
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.btnDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sendBtn {
+  padding: 10px 20px;
+  background-color: #1cb5e0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sendBtn:hover {
+  background-color: #000046;
+}

@@ -21,6 +21,9 @@ import scroll from "./assets/css/form.css"
 import Formpage from "./components/Form";
 // import subm from "./components/Form";
 
+import ProductHome from "./thirdpoc/producthome";
+
+
 const App = () => {
 	const [user, setUser] = useState({});
 	const [loggedIn, setLoggedIn] = useState(false);
@@ -65,15 +68,23 @@ const App = () => {
 						<Route path={"/patient"}>
 							<Patient/>
 						</Route>
+						<Route path={"/producthome"} exact>
+							<ProductHome/>
+						</Route>
+
+
+
 						<Route path={"/about-us"}>
 							<Redirect to={"/#about-us"} />
 						</Route>
+
 						<Route path={"/404"}>
 							<h1>Page not found</h1>
 						</Route>
 						<Route path={"/**"}>
 							<Redirect to={"/404"} />
 						</Route>
+
 					</Switch>
 				</div>
 			</Router>

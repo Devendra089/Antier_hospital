@@ -6,10 +6,13 @@ import CertificatesData from "../data/CertificatesData";
 import Navbar from "./homenavbar";
 import Footer from "./footer";
 import '../assets/css/home.css';
+import {useNavigate} from 'react-router-dom';
 
 const HomePage = () => {
+
   const handleMouseEnter = (link) => {
     window.location.href = link;
+    // navigate(link);
   };
 
 
