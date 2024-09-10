@@ -198,17 +198,20 @@ import Navbar from '../components/homenavbar'
 // import classes from "../data/formmaruti.module.css"; // Ensure correct path
 import Footer from '../components/footer';
 // import Navbar from './hyundaiNavbar';
-
+import { ClipLoader, FadeLoader } from 'react-spinners';
+// import {FadeLoader} from "react-spinners";
 
 const Producthome = () => {
     const [isEntering, setIsEntering] = useState(false);
     const [isSent, setIsSent] = useState(false);
     const [inputData, setInputData] = useState({
-        product:""
+        product: ""
     });
     const [error, setError] = useState(null);
 
-    
+    const [loading, setloading] = useState(null);
+
+
     const [apiData, setApiData] = useState(null);
     const navigate = useHistory();
 
@@ -220,7 +223,10 @@ const Producthome = () => {
         //     );
 
         try {
-            console.log("enter---------")
+            setloading(true);
+            console.log("loading false");
+
+            console.log("enter---------");
             // const response = await axios.post(
             //     "http://192.168.10.68:5000/sentimentanalysis",
             //     inputData,
@@ -229,31 +235,32 @@ const Producthome = () => {
                 "http://192.168.10.68:5000/sentimentanalysis",
                 inputData
             );
-        
-            console.log("responsee data ",response);
-            
+
+
+            console.log("responsee data ", response);
+
             if (response) {
                 console.log("API Data: ", response.data);
                 localStorage.setItem("responseData", JSON.stringify(response.data));
-                
+
                 setApiData(response.data);
-                
+
                 setIsSent(true); // Show second form after submission
             }
-            else{
-                console.log("resphondcser dfdn d-----------------",response);
+            else {
+                console.log("resphondcser dfdn d-----------------", response);
             }
-            
-        } 
+
+        }
         catch (error) {
             console.error("Error during API request:", error);
-            
+
             if (error.response) {
                 const { status, data } = error.response;
                 console.log("not found dtata check repdata", data.error);
                 alert(data.error);
                 console.log("not found dtata check rep", status);
-                
+
                 // console.error(
                 //     status === 404
                 //         ? "Endpoint not found"
@@ -265,10 +272,16 @@ const Producthome = () => {
                 console.error("No response from server:", error.message);
             }
         }
+        finally {
+            console.log("loading false");
+
+            setloading(false);
+        }
     };
 
     const resetForm = () => {
-        setInputData({ product:""});
+        setInputData({ product: "" });
+
         setIsSent(false); // Show submission form again
     };
 
@@ -276,19 +289,57 @@ const Producthome = () => {
         setIsEntering(true);
     };
 
+    // const override= {
+    //     display: "block",
+    //     margin: "0 auto",
+    //     borderColor: "red",
+
+    //   };
+
+    const styles = {
+        overlay: {
+            position: 'fixed',   // Covers the entire screen
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            //   backgroundColor: 'rgba(0, 0, 0, 0.5)',  // Faded background
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            zIndex: 9999,  // Ensures it appears above all other content
+        }
+    };
+
+    if (loading) {
+        return (
+            <div style={styles.overlay}>
+                <ClipLoader size={100} color={"#36D7B7"} loading={loading} />
+            </div>
+        );
+    }
+
     return (
         <>
+         {loading && (
+         <div style={styles.overlay}>
+         <ClipLoader size={80} color={"#36D7B7"} loading={loading} />
+     </div>
+      )}
+
+           
             <div id="apt-container">
+
                 <Navbar />
                 <p id={"Appointment-sub-head"} >
-					Welcome to the AI/ML Product Analysis Demo
-				</p> 
+                    Welcome to the AI/ML Product Analysis Demo
+                </p>
                 <div className="description-card">
-					<h2>Project Description</h2>
-					<p>
-                   Developed a proof of concept for classifying Maruti's Voice of Customer feedback into subcategories of Area, Sub-Area, and Domain, improving the analysis and addressing customer concerns efficiently, used Gradiant Boosting and N-gram for classification.
-					</p>
-				</div>
+                    <h2>Project Description</h2>
+                    <p>
+                        Developed a proof of concept for classifying Maruti's Voice of Customer feedback into subcategories of Area, Sub-Area, and Domain, improving the analysis and addressing customer concerns efficiently, used Gradiant Boosting and N-gram for classification.
+                    </p>
+                </div>
 
                 <div className={classes.bodycolor}>
 
@@ -315,7 +366,7 @@ const Producthome = () => {
                                         onChange={(e) =>
                                             setInputData({ ...inputData, product: e.target.value })
                                         }
-                                        // value={inputData.description}
+                                    // value={inputData.description}
                                     />
                                 </div>
                                 <div className={classes.btnDiv}>
@@ -333,10 +384,10 @@ const Producthome = () => {
                             </form>
                         </div>
 
-                        {isSent && (
+                        {(!loading && isSent) && (
                             <div className={classes.contactFormCard}>
                                 <form className={classes.contactForm}>
-                                    <h4 style={{textAlign: 'center'}}>Records</h4>
+                                    <h4 style={{ textAlign: 'center' }}>Records</h4>
                                     <div className={classes.Inputs}>
                                         <p className={classes.label}>Sentiments</p>
                                         <input
@@ -368,13 +419,13 @@ const Producthome = () => {
                                         />
                                     </div>
                                     {/* <div className={classes.sendBtn}> */}
-                                        <button
-                                            type="reset"
-                                            onClick={resetForm}
-                                            className={classes.sendBtn}
-                                        >
-                                            Clear
-                                        </button>
+                                    <button
+                                        type="reset"
+                                        onClick={resetForm}
+                                        className={classes.sendBtn}
+                                    >
+                                        Clear
+                                    </button>
                                     {/* </div> */}
                                 </form>
                             </div>
@@ -383,7 +434,7 @@ const Producthome = () => {
                 </div>
 
             </div>
-        <Footer />
+            <Footer />
         </>
     );
 };
